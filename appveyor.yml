@@ -2,7 +2,9 @@ version: 1.2.{build}
 image: Visual Studio 2019
 before_build:
 - cmd: dotnet restore
+configuration: Release
 build:
   project: Microsoft.Language.Xml.sln
   parallel: true
   verbosity: minimal
+  publish_nuget: true
